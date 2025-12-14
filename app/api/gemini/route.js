@@ -16,6 +16,8 @@ const supabase = createClient(
   process.env.SUPABASE_KEY,
 );
 
+export const maxDuration = 60;
+
 export const POST = async (req) => {
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
